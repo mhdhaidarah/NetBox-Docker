@@ -15,6 +15,15 @@ docker compose exec netbox /opt/netbox/netbox/manage.py createsuperuser
 ```bash
 http://<Server-IP>:8000
 ```
+## To make it start after reboot
+```bash
+docker update --restart=always netbox-docker-netbox-1
+docker update --restart=always netbox-docker-netbox-worker-1
+docker update --restart=always netbox-docker-postgres-1
+docker update --restart=always netbox-docker-redis-1
+docker update --restart=always netbox-docker-redis-cache-1
+```
+
 # Optional
 ## Import Devices Library
 ```bash
