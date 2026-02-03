@@ -18,7 +18,7 @@ http://<Server-IP>:8000
 # Optional
 ## Import Devices Library
 ```bash
-sudo su
+sudo apt update && sudo apt install -y python3 python3-pip python3-venv python3-dev build-essential libssl-dev libffi-dev libsqlite3-dev wget curl git
 git clone https://github.com/netbox-community/Device-Type-Library-Import.git
 cd Device-Type-Library-Import
 python3 -m venv venv
@@ -28,10 +28,10 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-## Now Setup URL http://127.0.0.1 & Token the token can be generated from GUI users V1 Must Be
+## Now Setup URL to the NetBox Server & Token the token can be generated from GUI Users and select V1
 ## EXAMPLE
 ```bash
-NETBOX_URL=https://127.0.0.1
+NETBOX_URL=https://192.168.0.100:8000
 NETBOX_TOKEN=LE0GCreKBP0v3jbXauWLVqbmzKtH3BnhI1Z184TV
 REPO_URL=https://github.com/netbox-community/devicetype-library.git
 REPO_BRANCH=master
@@ -41,7 +41,7 @@ IGNORE_SSL_ERRORS=True
 ```
 ## Update Here
 ```bash
-sudo nano /opt/Device-Type-Library-Import/.env
+sudo nano .env
 ```
 ## Install Device Library Importer
 ```bash
