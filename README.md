@@ -23,6 +23,10 @@ docker update --restart=always netbox-docker-postgres-1
 docker update --restart=always netbox-docker-redis-1
 docker update --restart=always netbox-docker-redis-cache-1
 ```
+## Or
+```bash
+docker update --restart unless-stopped netbox-docker-netbox-worker-1 netbox-docker-netbox-1 netbox-docker-redis-1 netbox-docker-redis-cache-1 netbox-docker-postgres-1
+```
 
 # Optional
 ## Import Devices Library
